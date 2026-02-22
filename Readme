@@ -1,0 +1,17 @@
+Este proyecto consiste en el desarrollo de un pequeño sistema en Python que permite almacenar y gestionar secuencias de ADN utilizando una lista simple.
+
+Cada secuencia contiene la siguiente información:
+
+ID
+
+Nombre de la muestra
+
+Secuencia genética (por ejemplo: ATGCGTA)
+
+Nivel de riesgo asociado
+
+El objetivo del trabajo es aplicar conceptos básicos de programación, especialmente el manejo de listas y estructuras de datos, para organizar y recorrer la información de manera sencilla.
+
+El sistema permite registrar varias secuencias y visualizarlas, simulando un análisis básico de muestras biológicas.
+
+
