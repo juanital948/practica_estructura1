@@ -40,4 +40,4 @@ for s in lista_secuencias:
 
 
 def contar(secuencia, patron):
-    pass
+    pass 
