@@ -14,6 +14,20 @@ class Secuencia:
         print("\n")
 
 
+    def contar(self, patron, secuencia = None):
+
+        if secuencia is None:
+            secuencia = self.secuencia
+
+        if len(secuencia) < len(patron):
+            return 0
+
+        if secuencia[:len(patron)] == patron:
+            return 1 + self.contar(patron, secuencia[1:]) 
+        else:
+            return self.contar(patron, secuencia[1:])
+
+
 def registrar(lista):
     opcion = input("¿Quiere registrar una nueva secuencia? (SI/NO): ")
 
@@ -34,10 +48,14 @@ lista_secuencias = []
 
 registrar(lista_secuencias)
 
+print("\n")
 print("Registros guardados:")
+
 for s in lista_secuencias:
     s.mostrar()
-
-
-def contar(secuencia, patron):
-    pass 
+        
+patron = "AG"
+print("Conteo patrón en cada secuencia:")
+for s in lista_secuencias:
+    conteo = s.contar(patron)
+    print(f"Muestra con el nombre {s.nombre_muestra}: tiene como resultado {conteo} ocurrencias")
