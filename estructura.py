@@ -44,6 +44,18 @@ def registrar(lista):
 
     return registrar(lista)
 
+
+def nivel_riesgo_promedio(lista, suma = 0, i= 0):
+    
+    if len(lista) == 0:
+        return 0
+
+    if i == len(lista):
+        return suma / len(lista)
+    
+    return nivel_riesgo_promedio(lista, suma + lista[i].nivel_riesgo, i + 1)
+
+
 lista_secuencias = []
 
 registrar(lista_secuencias)
@@ -54,8 +66,14 @@ print("Registros guardados:")
 for s in lista_secuencias:
     s.mostrar()
         
+
 patron = "AG"
 print("Conteo patrón en cada secuencia:")
 for s in lista_secuencias:
     conteo = s.contar(patron)
     print(f"Muestra con el nombre {s.nombre_muestra}: tiene como resultado {conteo} ocurrencias")
+
+
+print("Promedio de nivel de riesgo:")
+promedio = nivel_riesgo_promedio(lista_secuencias)
+print(f"Promedio: {promedio}")
