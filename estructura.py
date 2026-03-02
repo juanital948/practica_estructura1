@@ -165,3 +165,13 @@ for s in lista_secuencias:
     print(f"Muestra: {s.nombre_muestra}")
     print("Original:", s.secuencia)
     print("Mutada:", nueva)
+
+
+
+# contar varios patrones 
+# patrones = ["AG", "AC", "GT"]
+# print("Conteo patrón en cada secuencia:")
+#for s in lista_secuencias:
+    # for patron in patrones:
+    #conteo = s.contar(patron)
+    #print(f"Muestra con el nombre {s.nombre_muestra}: tiene como resultado {conteo} ocurrencias")
